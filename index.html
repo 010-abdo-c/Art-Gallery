@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المعرض الفني | Art Gallery</title>
+    <meta name="description" content="معرض فني تفاعلي يعرض لوحات فنية عالمية من معهد شيكاغو للفنون.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">المعرض <span>الفني</span></h1>
+            <p class="subtitle">روائع الفن العالمي في مساحة هادئة</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- قسم الفلاتر -->
+        <div class="filters-container">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="Painting">لوحات</button>
+            <button class="filter-btn" data-filter="Photography">تصوير</button>
+            <button class="filter-btn" data-filter="Print">مطبوعات</button>
+        </div>
+
+        <!-- شبكة العرض (Gallery) -->
+        <div id="gallery" class="gallery-grid">
+            <!-- سيتم إضافة الأعمال الفنية هنا -->
+        </div>
+
+        <!-- مؤشر التحميل -->
+        <div id="loader" class="loader-container">
+            <div class="spinner"></div>
+            <p class="loader-text">جاري جلب الفن...</p>
+        </div>
+
+        <!-- زر عرض المزيد -->
+        <div class="load-more-container">
+            <button id="load-more" class="load-more-btn hidden">عرض المزيد</button>
+        </div>
+    </main>
+
+    <!-- النافذة المنبثقة (Modal) -->
+    <div id="artwork-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modal-image" src="" alt="صورة اللوحة" loading="lazy">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title">اسم اللوحة</h2>
+                    <p class="artist" id="modal-artist">اسم الفنان</p>
+                    
+                    <div class="details-group">
+                        <ul>
+                            <li><strong>تاريخ الإصدار:</strong> <span id="modal-date"></span></li>
+                            <li><strong>الخامات المستخدمة:</strong> <span id="modal-medium"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
