@@ -10,7 +10,7 @@ const excludedKeywords = [
     // NSFW
     'nude', 'naked', 'bather', 'venus', 'aphrodite', 'erotic', 'prostitute', 'breast', 'brothel', 'sensual', 'bath', 'nymph',
     // Sculptures
-    'sculpture', 'statue', 'bust'
+    'sculpture', 'women','statue', 'bust'
 ];
 
 /**
